@@ -1,0 +1,41 @@
+package Fechas;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class ejemplofchas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	Scanner sc = new Scanner(System.in);
+	LocalDate fecha;
+	int dia,mes,año;
+	boolean correcta = false;
+	do {
+		try {
+		System.out.println("Introduce día.");
+		dia=sc.nextInt();
+		System.out.println("Introduce mes");
+		mes=sc.nextInt();
+		System.out.println("Introduce año");
+		año = sc.nextInt();
+		}
+		catch (InputMismatchException e) { //Deja el scanneer con un enter 
+		//SOLO PASA CON ESTA EXCEPCION
+			sc.nextLine();
+			System.out.println("Esperaba un número");
+			continue;
+		}
+		try {
+			fecha = LocalDate.of(año, mes, dia);
+			System.out.println("fecha leida:"+fecha);
+			correcta = true;
+		}
+		catch(DateTimeParseException e) {
+			System.out.println("Fecha Incorrecta");
+		}
+	} while(correcta);
+	}
+}
