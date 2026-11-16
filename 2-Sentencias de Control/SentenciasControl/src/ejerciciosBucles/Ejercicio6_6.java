@@ -14,5 +14,7 @@ Para realizar el programa mostrar un menú con las opciones
 edad preguntar si desea ver el teatro
  Cerrar taquilla:se muestra el importe total recaudado y se acaba el programa
  */
+//2 Tarifas reducda 16 euros Normal 25 euros 
+
 	}
 }

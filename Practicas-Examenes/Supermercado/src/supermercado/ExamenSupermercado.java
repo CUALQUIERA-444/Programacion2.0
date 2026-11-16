@@ -51,6 +51,8 @@ public class ExamenSupermercado {
 		}
 	} while(!codigo.equalsIgnoreCase("fin"));
 	System.out.println("En total te has gastado :"+importeAct+" euros en productos");
+	System.out.println("Desea envío a domicilio");
+	
 	}
 public static boolean validarCodigo(String cod) {
 	return cod.matches("^P[A-Za-z][0-9]{3}$");
