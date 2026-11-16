@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+/home/inf1/Programacion2.0/1-Elementos de un programa/.metadata/.plugins/org.eclipse.jdt.core
-1865797976.index
-3477169492.index
-2629928885.index
