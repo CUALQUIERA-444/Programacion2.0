@@ -36,7 +36,7 @@ El precio sin descuentos, los descuentos aplicados y el precio final.
 	double descuento_a, descuento_b, descuento_c,recarga; 
 	System.out.println("Introduce el tipo de vehiculo (1 -> Coche, 2 -> Moto , 3 -> Furgoneta");
 	tipo = sc.nextInt();
-	if (tipo < 0 || tipo > 3) {
+	if (tipo < 1 || tipo > 3) {
 		System.out.println("Tipo no valido reinicie el programa");
 	}
 	else {
