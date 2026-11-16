@@ -15,5 +15,4 @@ edad preguntar si desea ver el teatro
  Cerrar taquilla:se muestra el importe total recaudado y se acaba el programa
  */
 	}
-
 }
