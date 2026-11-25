@@ -135,7 +135,7 @@ public class ExamenPatinetes {
 	System.out.println("Introduzca su carnet de socio");
 	carnet_socio = sc.nextLine();
 	if(carnet_socio.matches(regex)) {
-		String placeholder = carnet_socio.substring(carnet_socio.length()-2, carnet_socio.length());
+		String placeholder = carnet_socio.substring(4); //Correcion desde la posicion 4 hasta la ultima evade posibles fallos
 		descuento = Double.parseDouble(placeholder);
 		precio_alquiler = precio_alquiler - precio_alquiler * descuento / 100;
 	}
@@ -159,10 +159,7 @@ public class ExamenPatinetes {
 		int resto = minutos % 60;
 		int horas = minutos / 60;
 		double precio = 0;
-		if(resto > 0) { //Sobran 61
-			if(resto > 60) {
-			horas = horas + resto / 60;
-			}
+		if(resto > 0) { //Correcion el resto al dividir entre 60 no puede ser mayor que 
 			horas = horas + 1;
 		}
 		if(tipo.equalsIgnoreCase("Basico")) {
