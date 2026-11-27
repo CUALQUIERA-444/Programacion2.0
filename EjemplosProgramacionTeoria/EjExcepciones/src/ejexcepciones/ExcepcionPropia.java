@@ -2,8 +2,8 @@ package ejexcepciones;
 import java.util.*;
 
 /**
- * Programa que recibe un número y devuelve el número de divisores de éste.
- * Descarta usando excepciones los números incorrectos o los menores o iguales que 0
+ * Programa que recibe un nï¿½mero y devuelve el nï¿½mero de divisores de ï¿½ste.
+ * Descarta usando excepciones los nï¿½meros incorrectos o los menores o iguales que 0
  * @author Bego
  *
  */
@@ -14,10 +14,10 @@ public class ExcepcionPropia {
 		// TODO Auto-generated method stub
 		int numero;
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Introduce un número:");
+		System.out.println("Introduce un nï¿½mero:");
 		try{
 			numero=sc.nextInt();
-			System.out.println("Número de divisores:"+divisoresNumero(numero));
+			System.out.println("Nï¿½mero de divisores:"+divisoresNumero(numero));
 			
 		}catch(InputMismatchException e){
 			System.out.println("Formato incorrecto");
@@ -29,20 +29,26 @@ public class ExcepcionPropia {
 	}
 	
 	/**
-	 * Función que recibe un número y devuelve el número de divisores de éste
-	 * @param num número a procesar
-	 * @return número de divisores
-	 * @throws NumeroIncorrectoException si el número recibido es negativo ó 0
+	 * Funciï¿½n que recibe un nï¿½mero y devuelve el nï¿½mero de divisores de ï¿½ste
+	 * @param num nï¿½mero a procesar
+	 * @return nï¿½mero de divisores
+	 * @throws NumeroIncorrectoException si el nï¿½mero recibido es negativo ï¿½ 0
 	 */
 	
 	public static int divisoresNumero(int num) throws NumeroIncorrectoException{
 		int contador=0;
 		if (num<=0)
 			throw new NumeroIncorrectoException("Valor no permitido");
+		//Indica el lanzamiento de la excepcion 
 		for (int i=1;i<=num;i++)
 			if (num%i==0)
 				contador++;
 		return contador;
+		
+		//Creacion de excepciones (proceso de la clase)
+		//En las opciones de errores le damos a create class en la caroeta 
+		//Elegimos Constructors from superclass
+		//De toda la clase se puede quitar todo pero es mejor dejar los 2 primeros
+		
 	}
-
 }
